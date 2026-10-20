@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KFM Beauty Bar | Spa & Beauty — Mahikeng</title>
+  <meta name="description" content="KFM Beauty Bar in Airport View, Mahikeng. Facials, massages, couples packages, birthday packages & group massages. Book on WhatsApp 083 230 0931.">
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="favicon-192.png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    :root{--bg:#fdf8fa;--card:#fff;--ink:#2a1a22;--soft:#5c4550;--muted:#8a7380;--border:#f0e4ea;--pink:#c45b8a;--pink-dim:#a34570;--pink-soft:#fceef4;--lavender:#9b7eb8;--gold:#d4a574;--dark:#1a1015}
+    html{scroll-behavior:smooth}
+    body{font-family:'Plus Jakarta Sans',system-ui,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased}
+    h1,h2,h3,h4{font-weight:800;line-height:1.15;letter-spacing:-.03em}
+    a{color:inherit;text-decoration:none}img{max-width:100%;display:block}
+    nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,255,255,.97);backdrop-filter:blur(14px);border-bottom:1px solid var(--border)}
+    nav .inner{max-width:1100px;margin:0 auto;padding:12px 22px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .nav-logo{display:flex;align-items:center;gap:12px}
+    .logo-mark{width:48px;height:48px;border-radius:50%;object-fit:cover;background:#fff;border:1px solid var(--border)}
+    .logo-text strong{display:block;font-size:1.05rem}
+    .logo-text small{font-size:.68rem;color:var(--pink);letter-spacing:.1em;text-transform:uppercase;font-weight:700}
+    .nav-links{display:flex;gap:18px;align-items:center}
+    .nav-links a{font-size:.88rem;font-weight:600;color:var(--soft)}
+    .nav-links a:hover{color:var(--pink)}
+    .nav-cta{background:var(--pink);color:#fff!important;padding:10px 20px;border-radius:40px;font-weight:700;font-size:.82rem;box-shadow:0 4px 14px rgba(196,91,138,.3)}
+    .nav-cta:hover{background:var(--pink-dim)}
+    .menu-toggle{display:none;background:none;border:none;font-size:1.5rem;color:var(--pink);cursor:pointer}
+    .hero{padding:120px 22px 60px;background:linear-gradient(180deg,var(--pink-soft) 0%,var(--bg) 100%)}
+    .hero-grid{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}
+    .hero-badge{display:inline-flex;align-items:center;gap:8px;background:#fff;border:1px solid var(--border);padding:7px 14px;border-radius:40px;margin-bottom:18px;font-size:.78rem;font-weight:700;color:var(--soft)}
+    .hero-badge .stars{color:#e8b84a}
+    .hero h1{font-size:clamp(2.2rem,5vw,3.2rem);margin-bottom:14px}
+    .hero h1 span{color:var(--pink)}
+    .hero-sub{font-size:1.05rem;color:var(--soft);max-width:440px;margin-bottom:26px;line-height:1.7}
+    .hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:28px}
+    .btn{display:inline-flex;align-items:center;gap:8px;padding:14px 26px;border-radius:50px;font-weight:700;font-size:.9rem;transition:.2s;border:none;cursor:pointer}
+    .btn-primary{background:var(--pink);color:#fff;box-shadow:0 6px 18px rgba(196,91,138,.32)}
+    .btn-primary:hover{background:var(--pink-dim);transform:translateY(-2px)}
+    .btn-outline{background:#fff;color:var(--pink);border:1.5px solid var(--pink)}
+    .btn-outline:hover{background:var(--pink);color:#fff}
+    .hero-meta{display:flex;gap:22px;flex-wrap:wrap;padding-top:22px;border-top:1px solid var(--border);font-size:.85rem;color:var(--soft)}
+    .hero-meta strong{color:var(--ink)}
+    .hero-img{border-radius:20px;overflow:hidden;box-shadow:0 20px 50px rgba(196,91,138,.15);width:100%;max-height:480px;object-fit:cover;aspect-ratio:3/4}
+    section{padding:72px 22px}
+    .container{max-width:1100px;margin:0 auto}
+    .section-label{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--pink);font-weight:800;margin-bottom:10px}
+    .section-title{font-size:clamp(1.7rem,4vw,2.3rem);margin-bottom:12px}
+    .section-title span{color:var(--pink)}
+    .section-intro{color:var(--soft);max-width:520px;margin-bottom:36px}
+    #services{background:#fff}
+    .services-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:16px}
+    .service-card{background:var(--bg);border:1px solid var(--border);border-radius:16px;padding:26px 22px;transition:.25s}
+    .service-card:hover{transform:translateY(-4px);box-shadow:0 12px 28px rgba(196,91,138,.1);border-color:#e8c4d4}
+    .service-icon{font-size:1.6rem;margin-bottom:12px}
+    .service-card h3{font-size:1.05rem;margin-bottom:6px}
+    .service-card p{font-size:.88rem;color:var(--soft)}
+    #packages{background:var(--bg)}
+    .pkg-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:18px}
+    .pkg-card{background:#fff;border:1px solid var(--border);border-radius:18px;overflow:hidden;display:flex;flex-direction:column;transition:.25s}
+    .pkg-card:hover{transform:translateY(-4px);box-shadow:0 14px 32px rgba(196,91,138,.12)}
+    .pkg-card .pkg-img{height:160px;object-fit:cover;width:100%;background:var(--pink-soft)}
+    .pkg-body{padding:22px;flex:1;display:flex;flex-direction:column}
+    .pkg-tag{font-size:.7rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--pink);margin-bottom:6px}
+    .pkg-card h3{font-size:1.15rem;margin-bottom:8px}
+    .pkg-card ul{list-style:none;margin:0 0 14px;flex:1}
+    .pkg-card ul li{font-size:.88rem;color:var(--soft);padding:3px 0;padding-left:16px;position:relative}
+    .pkg-card ul li:before{content:"✓";position:absolute;left:0;color:var(--pink);font-weight:700}
+    .pkg-price{font-size:1.35rem;font-weight:800;color:var(--ink);margin-bottom:12px}
+    .pkg-price small{font-size:.8rem;font-weight:600;color:var(--muted)}
+    .pkg-card .btn{width:100%;justify-content:center;padding:12px;font-size:.85rem}
+    #gallery{background:#fff}
+    .gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+    .gallery-item{border-radius:14px;overflow:hidden;aspect-ratio:3/4;border:1px solid var(--border);background:var(--pink-soft)}
+    .gallery-item img{width:100%;height:100%;object-fit:cover;transition:transform .35s}
+    .gallery-item:hover img{transform:scale(1.04)}
+    .gallery-item.wide{grid-column:span 2;aspect-ratio:16/10}
+    #reviews{background:var(--dark);color:#fff}
+    #reviews .section-label{color:var(--gold)}
+    #reviews .section-title{color:#fff}
+    #reviews .section-title span{color:var(--gold)}
+    #reviews .section-intro{color:rgba(255,255,255,.7)}
+    .reviews-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+    .review-card{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:16px;padding:24px}
+    .review-stars{color:var(--gold);margin-bottom:12px;letter-spacing:2px}
+    .review-card p{font-size:.95rem;line-height:1.65;margin-bottom:12px;color:rgba(255,255,255,.9)}
+    .review-card cite{font-size:.8rem;font-style:normal;color:rgba(255,255,255,.5)}
+    #contact{background:var(--bg)}
+    .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+    .contact-block{margin-bottom:22px}
+    .contact-block h4{font-size:.95rem;margin-bottom:6px;display:flex;gap:8px;align-items:center}
+    .contact-block h4 span{color:var(--pink)}
+    .contact-block p,.contact-block a{color:var(--soft);font-size:.95rem}
+    .contact-block a:hover{color:var(--pink)}
+    .hours-list{list-style:none;background:#fff;border-radius:12px;padding:6px 16px;border:1px solid var(--border);margin-top:8px}
+    .hours-list li{display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px dashed var(--border);font-size:.9rem;color:var(--soft)}
+    .hours-list li:last-child{border:none}
+    .hours-list strong{color:var(--ink)}
+    .contact-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}
+    .map-box{border-radius:16px;overflow:hidden;border:1px solid var(--border);aspect-ratio:4/3;background:var(--pink-soft)}
+    .map-box iframe{width:100%;height:100%;border:0}
+    .cta-final{background:linear-gradient(135deg,var(--pink) 0%,var(--pink-dim) 100%);color:#fff;text-align:center;padding:72px 22px}
+    .cta-final h2{font-size:clamp(1.7rem,4vw,2.4rem);margin-bottom:12px;color:#fff}
+    .cta-final p{color:rgba(255,255,255,.9);margin-bottom:24px}
+    .cta-final-actions{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+    .btn-white{background:#fff;color:var(--pink)}
+    .btn-white:hover{transform:translateY(-2px)}
+    .btn-ghost{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.4)}
+    .btn-ghost:hover{background:rgba(255,255,255,.1)}
+    footer{background:var(--dark);color:rgba(255,255,255,.5);padding:44px 22px 22px;text-align:center}
+    footer img{width:64px;height:64px;border-radius:50%;margin:0 auto 12px;background:#fff;border:1px solid rgba(255,255,255,.15)}
+    .footer-logo{font-size:1.2rem;font-weight:800;color:#fff;margin-bottom:4px}
+    .footer-tag{font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--pink);margin-bottom:18px;font-weight:700}
+    .footer-links{display:flex;gap:22px;justify-content:center;flex-wrap:wrap;margin-bottom:20px}
+    .footer-links a{font-size:.85rem;color:rgba(255,255,255,.5)}
+    .footer-links a:hover{color:var(--pink)}
+    .footer-copy{font-size:.72rem;color:rgba(255,255,255,.3);padding-top:18px;border-top:1px solid rgba(255,255,255,.08)}
+    .float-wa{position:fixed;bottom:20px;right:20px;z-index:90;background:#25D366;color:#fff;width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.5rem;box-shadow:0 6px 22px rgba(37,211,102,.4)}
+    .float-wa:hover{transform:scale(1.08)}
+    @media(max-width:860px){
+      .hero-grid,.contact-grid,.reviews-grid,.gallery-grid{grid-template-columns:1fr}
+      .gallery-item.wide{grid-column:span 1}
+      .hero{padding:110px 18px 48px}
+      .nav-links{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;background:#fff;padding:16px;gap:12px;border-bottom:1px solid var(--border);align-items:flex-start}
+      .nav-links.open{display:flex}
+      .menu-toggle{display:block}
+      section{padding:52px 18px}
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="inner">
+      <a href="#top" class="nav-logo">
+        <img class="logo-mark" src="logo.png" alt="KFM Beauty Bar">
+        <div class="logo-text"><strong>KFM Beauty Bar</strong><small>Mahikeng</small></div>
+      </a>
+      <button class="menu-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Menu">☰</button>
+      <div class="nav-links">
+        <a href="#services" onclick="this.parentElement.classList.remove('open')">Services</a>
+        <a href="#packages" onclick="this.parentElement.classList.remove('open')">Packages</a>
+        <a href="#gallery" onclick="this.parentElement.classList.remove('open')">Gallery</a>
+        <a href="#contact" onclick="this.parentElement.classList.remove('open')">Book</a>
+        <a href="https://wa.me/27832300931" class="nav-cta" target="_blank" rel="noopener">WhatsApp</a>
+      </div>
+    </div>
+  </nav>
+
+  <section class="hero" id="top">
+    <div class="hero-grid">
+      <div>
+        <div class="hero-badge"><span class="stars">★★★★★</span><span>5.0 · Google reviews</span></div>
+        <h1>Your glow-up starts at <span>KFM</span>.</h1>
+        <p class="hero-sub">Facials, massages, couples packages, birthday packages and group sessions in Airport View, Mahikeng. Book easily on WhatsApp.</p>
+        <div class="hero-actions">
+          <a href="https://wa.me/27832300931?text=Hi%20KFM%2C%20I%27d%20like%20to%20book." class="btn btn-primary" target="_blank" rel="noopener">💬 Book on WhatsApp</a>
+          <a href="tel:0832300931" class="btn btn-outline">📞 083 230 0931</a>
+        </div>
+        <div class="hero-meta">
+          <span><strong>158 Phase 2</strong> · Airport View</span>
+          <span><strong>Mon–Sat</strong> 10am–6:30pm</span>
+        </div>
+      </div>
+      <img class="hero-img" src="img/lounge.jpg" alt="KFM Beauty Bar lounge" loading="eager">
+    </div>
+  </section>
+
+  <section id="services">
+    <div class="container">
+      <div class="section-label">What we offer</div>
+      <h2 class="section-title">Services for your <span>self-care</span>.</h2>
+      <p class="section-intro">From facials to full-body massage, couples and group packages.</p>
+      <div class="services-grid">
+        <div class="service-card"><div class="service-icon">✨</div><h3>Facial therapy</h3><p>Deep-cleansing and glow treatments for healthier skin.</p></div>
+        <div class="service-card"><div class="service-icon">💆</div><h3>Massages</h3><p>Full body, neck &amp; back, hot stones, TMS and gun massager.</p></div>
+        <div class="service-card"><div class="service-icon">🦶</div><h3>Foot therapy</h3><p>Foot scrub and reflexology to ease tired feet.</p></div>
+        <div class="service-card"><div class="service-icon">💅</div><h3>Manicure &amp; pedicure</h3><p>Clean, neat nails and soft feet.</p></div>
+        <div class="service-card"><div class="service-icon">🕯️</div><h3>Waxing</h3><p>Underarm and body waxing for smooth skin.</p></div>
+        <div class="service-card"><div class="service-icon">👁️</div><h3>Eyelash extensions</h3><p>Fuller lashes that frame your eyes.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="packages">
+    <div class="container">
+      <div class="section-label">Packages &amp; specials</div>
+      <h2 class="section-title">Something for <span>everyone</span>.</h2>
+      <p class="section-intro">Couples, birthdays, groups and solo treats — book on WhatsApp.</p>
+      <div class="pkg-grid">
+        <article class="pkg-card">
+          <img class="pkg-img" src="img/massage-session.jpg" alt="Full body massage" loading="lazy">
+          <div class="pkg-body">
+            <div class="pkg-tag">Solo · Popular</div>
+            <h3>Neck &amp; back massage</h3>
+            <ul><li>Focused tension relief</li><li>Great for desk stress</li></ul>
+            <div class="pkg-price">From R250</div>
+            <a class="btn btn-outline" href="https://wa.me/27832300931?text=Hi%20KFM%2C%20neck%20and%20back%20massage." target="_blank" rel="noopener">Book on WhatsApp</a>
+          </div>
+        </article>
+        <article class="pkg-card">
+          <img class="pkg-img" src="img/hotstones.jpg" alt="Hot stones" loading="lazy">
+          <div class="pkg-body">
+            <div class="pkg-tag">Special</div>
+            <h3>Massage + Foot therapy</h3>
+            <ul><li>Full-body massage</li><li>Foot therapy</li><li>Both for one price</li></ul>
+            <div class="pkg-price">R600 <small>both</small></div>
+            <a class="btn btn-outline" href="https://wa.me/27832300931?text=Hi%20KFM%2C%20massage%20%2B%20foot%20therapy%20special." target="_blank" rel="noopener">Book on WhatsApp</a>
+          </div>
+        </article>
+        <article class="pkg-card">
+          <img class="pkg-img" src="img/couple-massage-room.jpg" alt="Couple massage" loading="lazy">
+          <div class="pkg-body">
+            <div class="pkg-tag">Couples</div>
+            <h3>Couple massage</h3>
+            <ul><li>Full-body massage for two</li><li>Side-by-side tables</li></ul>
+            <div class="pkg-price">R799</div>
+            <a class="btn btn-outline" href="https://wa.me/27832300931?text=Hi%20KFM%2C%20couple%20massage." target="_blank" rel="noopener">Book on WhatsApp</a>
+          </div>
+        </article>
+        <article class="pkg-card">
+          <img class="pkg-img" src="img/couples-retreat.jpg" alt="Couple retreat" loading="lazy">
+          <div class="pkg-body">
+            <div class="pkg-tag">Couples · Premium</div>
+            <h3>Couple's retreat</h3>
+            <ul><li>Massage</li><li>Hot stones</li><li>Foot scrub</li><li>Reflexology</li></ul>
+            <div class="pkg-price">R1 600 <small>all for</small></div>
+            <a class="btn btn-outline" href="https://wa.me/27832300931?text=Hi%20KFM%2C%20Couple%27s%20Retreat." target="_blank" rel="noopener">Book on WhatsApp</a>
+          </div>
+        </article>
+        <article class="pkg-card">
+          <img class="pkg-img" src="img/snacks-setup.jpg" alt="Birthday basic" loading="lazy">
+          <div class="pkg-body">
+            <div class="pkg-tag">Birthday · Basic</div>
+            <h3>Basic package</h3>
+            <ul><li>Snacks</li><li>Foot scrub</li><li>Full body massage</li></ul>
+            <div class="pkg-price">R699</div>
+            <a class="btn btn-outline" href="https://wa.me/27832300931?text=Hi%20KFM%2C%20Basic%20Birthday%20Package." target="_blank" rel="noopener">Book on WhatsApp</a>
+          </div>
+        </article>
+        <article class="pkg-card">
+          <img class="pkg-img" src="img/birthday-celebration.jpg" alt="Birthday shine" loading="lazy">
+          <div class="pkg-body">
+            <div class="pkg-tag">Birthday · Shine</div>
+            <h3>Shine package</h3>
+            <ul><li>Snacks</li><li>Hot stones</li><li>Foot therapy</li><li>Full body massage</li></ul>
+            <div class="pkg-price">R999</div>
+            <a class="btn btn-outline" href="https://wa.me/27832300931?text=Hi%20KFM%2C%20Shine%20Birthday%20Package." target="_blank" rel="noopener">Book on WhatsApp</a>
+          </div>
+        </article>
+        <article class="pkg-card">
+          <img class="pkg-img" src="img/facial-hands.jpg" alt="Luxury birthday" loading="lazy">
+          <div class="pkg-body">
+            <div class="pkg-tag">Birthday · Luxury</div>
+            <h3>Luxury package</h3>
+            <ul><li>Snacks</li><li>Deep-cleansing facial</li><li>Foot therapy</li><li>Full body massage with hot stones</li><li>Complimentary mini-gift</li></ul>
+            <div class="pkg-price">R1 599</div>
+            <a class="btn btn-outline" href="https://wa.me/27832300931?text=Hi%20KFM%2C%20Luxury%20Birthday%20Package." target="_blank" rel="noopener">Book on WhatsApp</a>
+          </div>
+        </article>
+        <article class="pkg-card">
+          <img class="pkg-img" src="img/group-massage.jpg" alt="Group massage" loading="lazy">
+          <div class="pkg-body">
+            <div class="pkg-tag">Groups</div>
+            <h3>Group massage</h3>
+            <ul><li>Group of 3 — R2 400</li><li>Group of 4 — R3 000</li><li>Group of 6 — R4 500</li><li>Full body, foot scrub, drinks &amp; more</li></ul>
+            <div class="pkg-price">From R2 400</div>
+            <a class="btn btn-outline" href="https://wa.me/27832300931?text=Hi%20KFM%2C%20group%20massage." target="_blank" rel="noopener">Book on WhatsApp</a>
+          </div>
+        </article>
+        <article class="pkg-card">
+          <img class="pkg-img" src="img/facial-1.jpg" alt="Student special" loading="lazy">
+          <div class="pkg-body">
+            <div class="pkg-tag">Students</div>
+            <h3>Bestie students special</h3>
+            <ul><li>Bring 2 besties with student cards</li><li>Pay for only 2 @ R800</li><li>Full-body massage + basic facial (1hr)</li></ul>
+            <div class="pkg-price">R800 <small>for 2</small></div>
+            <a class="btn btn-outline" href="https://wa.me/27832300931?text=Hi%20KFM%2C%20student%20bestie%20special." target="_blank" rel="noopener">Book on WhatsApp</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="gallery">
+    <div class="container">
+      <div class="section-label">Inside KFM</div>
+      <h2 class="section-title">A space made for <span>you</span>.</h2>
+      <p class="section-intro">Treatment rooms, lounge and real moments from our clients.</p>
+      <div class="gallery-grid">
+        <div class="gallery-item wide"><img src="img/treatment-room.jpg" alt="Treatment room" loading="lazy"></div>
+        <div class="gallery-item"><img src="img/massage-session.jpg" alt="Massage" loading="lazy"></div>
+        <div class="gallery-item"><img src="img/hotstones.jpg" alt="Hot stones" loading="lazy"></div>
+        <div class="gallery-item"><img src="img/facial-hands.jpg" alt="Facial" loading="lazy"></div>
+        <div class="gallery-item"><img src="img/facial-3.jpg" alt="Glow" loading="lazy"></div>
+        <div class="gallery-item"><img src="img/couples-retreat.jpg" alt="Couples" loading="lazy"></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="reviews">
+    <div class="container">
+      <div class="section-label">Reviews</div>
+      <h2 class="section-title">What clients <span>say</span>.</h2>
+      <p class="section-intro">5.0 stars on Google.</p>
+      <div class="reviews-grid">
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p>“Had an amazing glow after getting a facial at KFM. Together with an underarm wax. I’ll definitely be coming back.”</p>
+          <cite>— Google review</cite>
+        </div>
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p>“The owner is the loveliest lady. She interacts and advises on the problems she finds while massaging you — e.g. clots, knots.”</p>
+          <cite>— Google review</cite>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+      <div class="section-label">Book now</div>
+      <h2 class="section-title">Ready to <span>book</span>?</h2>
+      <p class="section-intro">WhatsApp or call — we’ll find a time that works for you.</p>
+      <div class="contact-grid">
+        <div>
+          <div class="contact-block"><h4><span>📍</span> Location</h4><p>House No. 158, Phase 2<br>Airport View, Mahikeng, 2745</p></div>
+          <div class="contact-block"><h4><span>📞</span> Phone / WhatsApp</h4><p><a href="tel:0832300931">083 230 0931</a><br><a href="https://wa.me/27832300931" target="_blank" rel="noopener">Message on WhatsApp</a></p></div>
+          <div class="contact-block"><h4><span>🕒</span> Hours</h4>
+            <ul class="hours-list">
+              <li><span>Monday – Saturday</span> <strong>10:00 AM – 6:30 PM</strong></li>
+              <li><span>Sunday</span> <strong>Closed</strong></li>
+            </ul>
+          </div>
+          <div class="contact-actions">
+            <a href="https://wa.me/27832300931?text=Hi%20KFM%2C%20I%27d%20like%20to%20book." class="btn btn-primary" target="_blank" rel="noopener">💬 Book on WhatsApp</a>
+            <a href="tel:0832300931" class="btn btn-outline">📞 Call</a>
+          </div>
+        </div>
+        <div class="map-box">
+          <iframe src="https://www.google.com/maps?q=158+Phase+2+Airport+View+Mahikeng&output=embed" loading="lazy" title="Map"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-final">
+    <h2>Book your appointment</h2>
+    <p>Facials, couples packages, birthdays and more — WhatsApp KFM Beauty Bar today.</p>
+    <div class="cta-final-actions">
+      <a href="https://wa.me/27832300931" class="btn btn-white" target="_blank" rel="noopener">💬 083 230 0931</a>
+      <a href="tel:0832300931" class="btn btn-ghost">Call now</a>
+    </div>
+  </section>
+
+  <footer>
+    <img src="logo.png" alt="KFM">
+    <div class="footer-logo">KFM Beauty Bar</div>
+    <div class="footer-tag">Airport View · Mahikeng</div>
+    <div class="footer-links">
+      <a href="#services">Services</a>
+      <a href="#packages">Packages</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#contact">Book</a>
+      <a href="tel:0832300931">083 230 0931</a>
+    </div>
+    <div class="footer-copy">© 2026 KFM Beauty Bar. All rights reserved.</div>
+  </footer>
+  <a href="https://wa.me/27832300931" class="float-wa" target="_blank" rel="noopener" aria-label="WhatsApp">💬</a>
+</body>
+</html>
